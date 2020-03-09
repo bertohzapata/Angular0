@@ -7,18 +7,100 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  persona1= {
-    nombre: 'Juan',
-    apellidos: 'Robles',
-    descripcion: 'CTO de la compañia',
-    img: 'https://arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/ZPAPKLU77KOJRSTLGPQTUIZ2NA.jpg'
-  };
-  persona2= {
+
+  personas = [
+    {
+      nombre: 'Juan',
+      apellidos: 'Robless',
+      descripcion: 'CTO de la compañia',
+      img: 'https://arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/ZPAPKLU77KOJRSTLGPQTUIZ2NA.jpg',
+      estatus: 2
+    },
+    {
     nombre: 'Lorena',
     apellidos: 'Cabrera',
     descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg'
-  };
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 2
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+  {
+  nombre: 'Lorena',
+    apellidos: 'Cabrera',
+    descripcion: 'CEO de la compañia',
+    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
+    estatus: 1
+  },
+];
 
   constructor() { }
 

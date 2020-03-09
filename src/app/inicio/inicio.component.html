@@ -1,5 +1,4 @@
-
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="card" style="width: 18rem;">
             <img [src]="persona1.img" class="card-img-top" alt="...">
@@ -18,5 +17,33 @@
             </div>
         </div>
         
+    </div>
+</div> -->
+
+
+<div class="container">
+    <div class="row">
+
+        <div *ngFor="let p of personas; let i = index">
+            <div class="card" style="width: 18rem;">
+                <img src="p.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ i+1 }} - {{ p.nombre }} {{ p.apellidos }}</h5>
+                    <ng-container *ngIf="p.estatus == 1; else falso">
+                        <p class="card-text">{{ p.descripcion }}</p>
+                        <a (click)="mensaje(p.nombre)" href="#" class="btn btn-primary">Detalles</a>
+                    </ng-container>
+                    <ng-template #falso>
+                        <a href="#" class="btn btn-danger">Inactivo</a>
+                    </ng-template>
+                    
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+
     </div>
 </div>
