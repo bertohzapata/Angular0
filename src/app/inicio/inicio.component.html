@@ -26,7 +26,7 @@
 
         <div *ngFor="let p of personas; let i = index">
             <div class="card" style="width: 18rem;">
-                <img src="p.img" class="card-img-top" alt="...">
+                <img [src]="p.img" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ i+1 }} - {{ p.nombre }} {{ p.apellidos }}</h5>
                     <ng-container *ngIf="p.estatus == 1; else falso">
