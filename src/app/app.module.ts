@@ -8,7 +8,8 @@ import { InicioComponent } from './inicio/inicio.component'
 
 import { RutasModule } from './rutas.module';
 
-
+import { StarwarsService } from './starwars.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,12 @@ import { RutasModule } from './rutas.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RutasModule
   ],
-  providers: [],
+  providers: [  
+    StarwarsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

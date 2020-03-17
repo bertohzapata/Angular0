@@ -24,7 +24,7 @@
 <div class="container">
     <div class="row">
 
-        <div *ngFor="let p of personas; let i = index">
+        <!-- div *ngFor="let p of personas; let i = index">
             <div class="card" style="width: 18rem;">
                 <img [src]="p.img" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -39,11 +39,35 @@
                     
                 </div>
             </div>
+        </div> -->
+
+
+        <!-- <div *ngFor="let p of personas">
+            <div *ngIf="p.estatus == 1" class="card" style="width: 18rem;">
+                <img [src]="p.img" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ p.nombre }} {{ p.apellidos }}</h5>
+                    <p class="card-text">{{ p.descripcion }}</p>
+                    <a (click)="mensaje(p.nombre)" href="#" class="btn btn-primary">Detalles</a>
+                    <input #input type="text" (keyup)="escribir(input.value)">
+                </div>
+            </div>
+        </div> -->
+
+
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">{{ personaje.name }}</p>
+                    <a href="#" class="btn btn-primary">Detalles</a>
+                </div>
+
         </div>
 
-        
-        
-        
+
+
+
 
     </div>
 </div>

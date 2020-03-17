@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StarwarsService } from '../starwars.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,109 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
+  personaje: any;
 
-  personas = [
-    {
-      nombre: 'Juan',
-      apellidos: 'Robless',
-      descripcion: 'CTO de la compañia',
-      img: 'https://arc-anglerfish-eu-central-1-prod-prisa.s3.amazonaws.com/public/ZPAPKLU77KOJRSTLGPQTUIZ2NA.jpg',
-      estatus: 2
-    },
-    {
-    nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 2
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-  {
-  nombre: 'Lorena',
-    apellidos: 'Cabrera',
-    descripcion: 'CEO de la compañia',
-    img: 'https://thinkandsell.com/wp-content/uploads/2012/11/importancia-empleados-experiencia-de-cliente.jpg',
-    estatus: 1
-  },
-];
-
-  constructor() { }
+  constructor(private _starWarsService: StarwarsService) { }
 
   ngOnInit() {
+    this._starWarsService.cargarPersonaje(2).subscribe(resp => this.personaje = resp);
+    console.log(this.personaje);
+    
   }
+
 
   mensaje(texto){
     console.log(texto);
     alert(texto);
+  }
+
+  escribir(cadena) {
+    console.log(cadena);
+    
   }
 
 }
